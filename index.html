@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Pomodoro Clock</title>
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="d-none d-sm-block col-sm-3"></div>
+      <main class="col-12 col-sm-6">
+        <div class="cir-area">
+          <div class="row spacer"></div>
+          <div class="status text-center">Pomodoro</div>
+          <div class="display text-center">
+            <span id="min" class="minute">25</span>
+            <span class="semi">:</span>
+            <span id="sec" class="second">00</span>
+          </div>
+
+          <div class="controls text-center">
+            <div id="sesPlay" class="play"><i class="fa fa-play fa-2x" aria-hidden="true"></i></div>
+            <div id="sesPause" class="pause"><i class="fa fa-pause fa-2x" aria-hidden="true"></i></div>
+            <div id="brkPlay" class="play"><i class="fa fa-play fa-2x" aria-hidden="true"></i></div>
+            <div id="brkPause" class="pause"><i class="fa fa-pause fa-2x" aria-hidden="true"></i></div>
+          </div>
+
+          <canvas id="myCanvas" width="320" height="300"></canvas>
+          <canvas id="canvasBG" width="320" height="300"></canvas>
+
+          <div class="setting">
+            <div class="row">
+              <!-- Session -->
+              <div class="col-6">
+                <div id="ses" class="title text-center">Session</div>
+
+                <div id="ses-minus" class="minus"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></div>
+                <span id="sesTime" class="duration">25</span>
+                <div id="ses-add" class="add"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></div>
+              </div>
+
+              <!-- Break -->
+              <div class="col-6">
+                <div id="brk" class="title text-center">Break</div>
+                <div id="brk-minus" class="minus"><i class="fa fa-angle-left fa-2x" aria-hidden="true"></i></div>
+                <span id="brkTime" class="duration">5</span>
+                <div id="brk-add" class="add"><i class="fa fa-angle-right fa-2x" aria-hidden="true"></i></div>
+              </div>
+
+            </div>
+
+            <!-- Reset Timer -->
+            <div class="row">
+              <div id="reset"><i class="fa fa-repeat fa-2x" aria-hidden="true"></i></div>
+            </div>
+          </div>
+
+        </div>
+      </main>
+      <div class="d-none d-sm-block col-sm-3"></div>
+    </div>
+  </div>
+
+
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="app.js"></script>
+</body>
+</html>
